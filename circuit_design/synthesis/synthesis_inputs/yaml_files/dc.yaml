@@ -1,0 +1,22 @@
+## the output database during learning ##
+database_dir: ""
+dsn_netlist: "circuit_design/synthesis/synthesis_inputs/synthesis_scirpt/dc.tcl"
+num_process: 1
+
+## add primary cells below, Cellect would choose from these cells ##
+params:
+  inv:  !!python/tuple []
+  mux:  !!python/tuple []
+  nd2:  !!python/tuple []
+  nr2:  !!python/tuple []
+
+## define the delay and PDP for normalization ##
+normalize: !!python/tuple [!!float delay_manual, !!float PDP_manual]
+
+## specs. space ##
+
+target_specs:
+  delay: !!python/tuple [!!float min, !!float max]
+  PDP: !!python/tuple [!!float min, !!float max]
+  area: !!python/tuple [!!float min, !!float max]
+
